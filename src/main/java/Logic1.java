@@ -195,16 +195,21 @@ public class Logic1
     in1To10(11, false) --> false
     in1To10(11, true) --> true */
     public boolean in1To10(int n, boolean outsideMode) {
-      if(n<1 && n>10){
+      if(n>=1 && n<=10){
           if(outsideMode == true){
+              return false;
+          }
+          else{
+              return true;
+          }
+      }
+      else{
+          if(outsideMode==true){
               return true;
           }
           else{
               return false;
           }
-      }
-      else{
-          return true;
       }
     }
 
